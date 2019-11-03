@@ -37,4 +37,4 @@ export default config;
 ### Contribution
 
 At the moment I am not open to contributions.
-If you are interested in working on this project or giving feedback, you can reach me on Twitter (@nicolasthy).
+If you are interested in working on this project or giving feedback, you can contact me on Twitter (@nicolasthy).
