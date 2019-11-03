@@ -2,6 +2,9 @@
 
 Manage your days off easily and plan your next holidays.
 
+<img width="1215" alt="Capture d’écran 2019-11-03 à 18 14 11" src="https://user-images.githubusercontent.com/4039090/68089109-df1ecb00-fe65-11e9-98c6-9db5fb4fc755.png">
+
+
 ### Install Jiyu
 
 Clone this repository and install it's packages.
