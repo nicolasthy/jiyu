@@ -1,27 +1,29 @@
 import config from "./config";
 
-export const defaults = {
+export let defaults = {
   startDate: config.startDate || new Date("06/01/2019"),
   currentDate: new Date(),
-  get diffMonths() {
-    return (
-      this.currentDate.getMonth() -
-      this.startDate.getMonth() +
-      12 * (this.currentDate.getFullYear() - this.startDate.getFullYear())
-    );
-  }
+  diffMonths:
+    new Date().getMonth() -
+    (config.startDate || new Date("06/01/2019")).getMonth() +
+    12 *
+      (new Date().getFullYear() -
+        (config.startDate || new Date("06/01/2019")).getFullYear())
 };
 
-export const holidays = {
+export const daysOff = {
   total: config.total || 25,
-  taken: config.taken || 0,
+  taken: config.taken || [],
+  earned: 0,
+  remaining: 0,
+  get takenCount() {
+    return config.taken
+      ? config.taken.reduce((previous, current) => {
+          return previous + current.count;
+        }, 0)
+      : 0;
+  },
   get earnedPerMonth() {
     return this.total / 12;
-  },
-  get earned() {
-    return this.earnedPerMonth * defaults.diffMonths;
-  },
-  get remaining() {
-    return Math.round((this.earned - this.taken) * 100) / 100;
   }
 };
