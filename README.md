@@ -1,4 +1,6 @@
-## jiyū
+<p style="text-align: center;">
+  <h1>jiyū</h1>
+</p>
 
 Manage your days off easily and plan your next holidays.
 
